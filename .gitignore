@@ -1,0 +1,4 @@
+node_modules/
+.next/
+blacklist.json
+*.db
