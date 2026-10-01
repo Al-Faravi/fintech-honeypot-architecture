@@ -34,7 +34,7 @@ export default function Login() {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/v1/auth/login', {
+      const res = await fetch('https://bib-honeypot-api.onrender.com/api/v1/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, bot_trap_field: botTrap })
@@ -132,7 +132,7 @@ export default function Login() {
         </div>
       </div>
       
-      <a href="http://localhost:5000/admin/secret-db-export" style={{ display: 'none' }} aria-hidden="true">Download Admin Backup</a>
+      <a href="https://bib-honeypot-api.onrender.com/admin/secret-db-export" style={{ display: 'none' }} aria-hidden="true">Download Admin Backup</a>
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
     // Polling for live notification count
     const fetchAlerts = () => {
-      fetch('http://localhost:5000/api/v1/alerts')
+      fetch('https://bib-honeypot-api.onrender.com/api/v1/alerts')
         .then(res => res.json())
         .then(data => {
           if (data.success) {
@@ -71,7 +71,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             </Link>
           ))}
           {/* HONEYPOT URL FOR SCRAPERS */}
-          <a href="http://localhost:5000/admin/secret-db-export" style={{ display: 'none' }}>Legacy Admin Portal</a>
+          <a href="https://bib-honeypot-api.onrender.com/admin/secret-db-export" style={{ display: 'none' }}>Legacy Admin Portal</a>
         </nav>
 
         <div className="p-4 border-t border-[#026b53] bg-[#014333]">

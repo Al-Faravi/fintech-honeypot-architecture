@@ -14,7 +14,7 @@ export default function PortfolioPage() {
     const token = localStorage.getItem("bankToken");
     if (!token) return router.push('/login');
 
-    fetch('http://localhost:5000/api/v1/customers', {
+    fetch('https://bib-honeypot-api.onrender.com/api/v1/customers', {
       headers: { 'Authorization': `Bearer ${token}` }
     })
     .then(res => res.json())

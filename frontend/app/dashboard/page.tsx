@@ -9,7 +9,7 @@ export default function DashboardOverview() {
   // Polling for live alerts
   useEffect(() => {
     const fetchAlerts = () => {
-      fetch('http://localhost:5000/api/v1/alerts')
+      fetch('https://bib-honeypot-api.onrender.com/api/v1/alerts')
         .then(res => res.json())
         .then(data => {
           if(data.success) setAlerts(data.data);
